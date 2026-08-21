@@ -23,7 +23,28 @@
             NOTABLE WALKS
         </div>
 
-        </header>
+        <!-- SEARCH -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="SEARCH"
+                autocomplete="off"
+            >
+
+            <button
+                id="clearSearch"
+                class="clear-search"
+                aria-label="Clear search"
+            >
+                ×
+            </button>
+
+        </div>
+
+    </header>
 
 
     <!-- SIDE CATEGORY NAVIGATION -->
@@ -51,68 +72,114 @@
         </div>
 
 
-        <!-- PHOTO COLLAGE -->
-        <section class="collage">
+        <!-- SEARCH RESULTS MESSAGE -->
+        <div id="searchMessage" class="search-message"></div>
 
-            <!-- IMAGE 1 -->
-            <div class="photo photo-1">
+
+        <!-- PHOTO COLLAGE -->
+        <section class="collage" id="collage">
+
+            <!-- DUA LIPA -->
+            <div
+                class="photo photo-1"
+                data-person="Dua Lipa"
+                data-category="Singer"
+            >
                 <img
-                    src="images/dualipa.jpg">
-                    alt="dualipa"
+                    src="images/dualipa.jpg"
+                    alt="Dua Lipa"
+                >
             </div>
 
 
-            <!-- IMAGE 2 -->
-            <div class="photo photo-2">
+            <!-- KENDALL JENNER -->
+            <div
+                class="photo photo-2"
+                data-person="Kendall Jenner"
+                data-category="Model"
+            >
                 <img
                     src="images/kendalljenner.jpg"
-                    alt="kendalljenner">
+                    alt="Kendall Jenner"
+                >
             </div>
 
 
-            <!-- IMAGE 3 -->
-            <div class="photo photo-3">
+            <!-- CONNOR STORRIE -->
+            <div
+                class="photo photo-3"
+                data-person="Connor Storrie"
+                data-category="Actor"
+            >
                 <img
                     src="images/connorstorrie.jpg"
-                    alt="connorstorrie">
+                    alt="Connor Storrie"
+                >
             </div>
 
 
-            <!-- IMAGE 4 -->
-            <div class="photo photo-4">
+            <!-- JENNIFER LAWRENCE -->
+            <div
+                class="photo photo-4"
+                data-person="Jennifer Lawrence"
+                data-category="Actor"
+            >
                 <img
                     src="images/jenniferlawrence.jpg"
-                    alt="jenniferlawrence">
+                    alt="Jennifer Lawrence"
+                >
             </div>
 
 
-            <!-- IMAGE 5 -->
-            <div class="photo photo-5">
+            <!-- JACOB ELORDI -->
+            <div
+                class="photo photo-5"
+                data-person="Jacob Elordi"
+                data-category="Actor"
+            >
                 <img
                     src="images/jacobelordi.jpg"
-                    alt="jacobelordi">
+                    alt="Jacob Elordi"
+                >
             </div>
 
-            <!-- IMAGE 6 -->
-            <div class="photo photo-6">
+
+            <!-- RIHANNA -->
+            <div
+                class="photo photo-6"
+                data-person="Rihanna"
+                data-category="Singer"
+            >
                 <img
                     src="images/rihanna.jpg"
-                    alt="rihanna">
+                    alt="Rihanna"
+                >
             </div>
 
 
-             <!-- IMAGE 7-->
-            <div class="photo photo-7">
+            <!-- MARGOT ROBBIE -->
+            <div
+                class="photo photo-7"
+                data-person="Margot Robbie"
+                data-category="Actor"
+            >
                 <img
                     src="images/margotrobbie.jpg"
-                    alt="margotrobbie">
+                    alt="Margot Robbie"
+                >
             </div>
-     
-             <!-- IMAGE 8 -->
-            <div class="photo photo-8">
+
+
+            <!-- HARRY STYLES -->
+            <div
+                class="photo photo-8"
+                data-person="Harry Styles"
+                data-category="Singer"
+            >
                 <img
                     src="images/harrystyles.jpg"
-                    alt="harrystyles">
+                    alt="Harry Styles"
+                >
             </div>
 
         </section>

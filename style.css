@@ -44,7 +44,9 @@ body {
 }
 
 
-/* NOTABLE WALKS LOGO */
+/* =========================================
+   NOTABLE WALKS LOGO
+========================================= */
 
 .brand {
     font-family: "Caveat Brush", cursive;
@@ -61,18 +63,84 @@ body {
 }
 
 
-/* GUIDE */
+/* =========================================
+   SEARCH
+========================================= */
 
-.guide {
-    font-family: Arial, sans-serif;
+.search-container {
+    position: relative;
 
-    font-size: clamp(32px, 3.2vw, 48px);
+    width: 220px;
 
-    font-weight: 400;
+    pointer-events: auto;
+}
 
-    letter-spacing: -2px;
 
-    margin-right: 35%;
+.search-input {
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 1px solid #111111;
+
+    background: transparent;
+
+    padding: 8px 30px 8px 0;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    color: #111111;
+
+    outline: none;
+}
+
+
+.search-input::placeholder {
+    color: #111111;
+
+    opacity: 1;
+}
+
+
+.search-input:focus {
+    border-bottom: 1px solid #777777;
+}
+
+
+.clear-search {
+    position: absolute;
+
+    right: 0;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: none;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.clear-search.visible {
+    opacity: 1;
+
+    pointer-events: auto;
 }
 
 
@@ -99,6 +167,7 @@ body {
     z-index: 100;
 }
 
+
 .side-nav a {
     color: #111111;
 
@@ -113,9 +182,11 @@ body {
     transition: opacity 0.25s ease;
 }
 
+
 .side-nav a:hover {
     opacity: 0.4;
 }
+
 
 .side-nav span {
     font-size: 12px;
@@ -158,11 +229,28 @@ body {
 
 
 /* =========================================
+   SEARCH MESSAGE
+========================================= */
+
+.search-message {
+    position: absolute;
+
+    top: 190px;
+    left: 35.2%;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    z-index: 20;
+}
+
+
+/* =========================================
    PHOTO COLLAGE
 ========================================= */
 
 .collage {
-
     position: relative;
 
     width: 76vw;
@@ -190,10 +278,12 @@ body {
 
     transition:
         transform 0.5s cubic-bezier(.2,.8,.2,1),
-        filter 0.5s ease;
+        filter 0.5s ease,
+        opacity 0.4s ease;
 
     cursor: pointer;
 }
+
 
 .photo img {
     width: 100%;
@@ -209,12 +299,29 @@ body {
 }
 
 
-/* Hover */
+/* =========================================
+   HIDDEN SEARCH RESULTS
+========================================= */
+
+.photo.hidden {
+    opacity: 0;
+
+    pointer-events: none;
+
+    visibility: hidden;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
 
 .photo:hover {
     transform: translateY(-8px);
+
     z-index: 50;
 }
+
 
 .photo:hover img {
     transform: scale(1.04);
@@ -330,19 +437,6 @@ body {
 }
 
 
-/* Large lower image */
-
-.photo-9 {
-    left: 75%;
-    top: 665px;
-
-    width: 230px;
-    height: 315px;
-
-    z-index: 5;
-}
-
-
 /* =========================================
    RESPONSIVE — TABLET
 ========================================= */
@@ -354,13 +448,16 @@ body {
         padding-right: 25px;
     }
 
-    .guide {
-        margin-right: 20%;
+
+    .search-container {
+        width: 180px;
     }
+
 
     .side-nav {
         left: 15px;
     }
+
 
     .collage {
         width: 82vw;
@@ -368,10 +465,17 @@ body {
         margin-left: 10%;
 
         transform: scale(0.9);
+
         transform-origin: top left;
     }
 
+
     .date {
+        left: 45%;
+    }
+
+
+    .search-message {
         left: 45%;
     }
 }
@@ -393,16 +497,29 @@ body {
             20px;
     }
 
+
     .brand {
         font-size: 28px;
     }
 
-    .guide {
-        font-size: 28px;
 
-        margin-right: 0;
+    /* Search */
 
-        letter-spacing: -1px;
+    .search-container {
+        width: 115px;
+    }
+
+
+    .search-input {
+        font-size: 9px;
+
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+
+    .clear-search {
+        font-size: 17px;
     }
 
 
@@ -440,9 +557,11 @@ body {
         backdrop-filter: blur(10px);
     }
 
+
     .side-nav a {
         font-size: 9px;
     }
+
 
     .side-nav span {
         font-size: 8px;
@@ -460,11 +579,23 @@ body {
     }
 
 
+    /* Search message */
+
+    .search-message {
+        top: 165px;
+
+        left: 20px;
+
+        font-size: 9px;
+    }
+
+
     /* Collage */
 
     .page {
         padding-top: 140px;
     }
+
 
     .collage {
 
@@ -486,6 +617,7 @@ body {
         height: 38vw;
     }
 
+
     .photo-2 {
         left: 71%;
         top: 0;
@@ -493,6 +625,7 @@ body {
         width: 27vw;
         height: 38vw;
     }
+
 
     .photo-3 {
         left: 5%;
@@ -502,6 +635,7 @@ body {
         height: 36vw;
     }
 
+
     .photo-4 {
         left: 34%;
         top: 42vw;
@@ -509,6 +643,7 @@ body {
         width: 27vw;
         height: 36vw;
     }
+
 
     .photo-5 {
         left: 63%;
@@ -518,6 +653,7 @@ body {
         height: 36vw;
     }
 
+
     .photo-6 {
         left: 5%;
         top: 82vw;
@@ -525,6 +661,7 @@ body {
         width: 27vw;
         height: 38vw;
     }
+
 
     .photo-7 {
         left: 42%;
@@ -534,17 +671,10 @@ body {
         height: 38vw;
     }
 
+
     .photo-8 {
         left: 71%;
         top: 82vw;
-
-        width: 27vw;
-        height: 38vw;
-    }
-
-    .photo-9 {
-        left: 34%;
-        top: 123vw;
 
         width: 27vw;
         height: 38vw;
