@@ -1,0 +1,552 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #111111;
+    font-family: "Inter", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 55px 5.2vw 0 3.5vw;
+
+    z-index: 100;
+
+    pointer-events: none;
+}
+
+
+/* NOTABLE WALKS LOGO */
+
+.brand {
+    font-family: "Caveat Brush", cursive;
+
+    font-size: clamp(30px, 3vw, 48px);
+
+    letter-spacing: 1px;
+
+    line-height: 0.8;
+
+    transform: rotate(-1deg);
+
+    white-space: nowrap;
+}
+
+
+/* GUIDE */
+
+.guide {
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(32px, 3.2vw, 48px);
+
+    font-weight: 400;
+
+    letter-spacing: -2px;
+
+    margin-right: 35%;
+}
+
+
+/* =========================================
+   SIDE NAVIGATION
+========================================= */
+
+.side-nav {
+    position: fixed;
+
+    left: 4.5vw;
+    top: 49%;
+
+    transform: translateY(-50%) rotate(-90deg);
+
+    transform-origin: center;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    white-space: nowrap;
+
+    z-index: 100;
+}
+
+.side-nav a {
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.5px;
+
+    transition: opacity 0.25s ease;
+}
+
+.side-nav a:hover {
+    opacity: 0.4;
+}
+
+.side-nav span {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.page {
+    position: relative;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding-top: 200px;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.date {
+    position: absolute;
+
+    top: 415px;
+    left: 35.2%;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    letter-spacing: 0.3px;
+
+    z-index: 20;
+}
+
+
+/* =========================================
+   PHOTO COLLAGE
+========================================= */
+
+.collage {
+
+    position: relative;
+
+    width: 76vw;
+
+    max-width: 980px;
+
+    height: 1200px;
+
+    margin-left: 11%;
+
+    margin-top: 170px;
+}
+
+
+/* =========================================
+   ALL PHOTOS
+========================================= */
+
+.photo {
+    position: absolute;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+    transition:
+        transform 0.5s cubic-bezier(.2,.8,.2,1),
+        filter 0.5s ease;
+
+    cursor: pointer;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s cubic-bezier(.2,.8,.2,1),
+        filter 0.5s ease;
+}
+
+
+/* Hover */
+
+.photo:hover {
+    transform: translateY(-8px);
+    z-index: 50;
+}
+
+.photo:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   PHOTO POSITIONS
+========================================= */
+
+
+/* Top left-ish image */
+
+.photo-1 {
+    left: 50%;
+    top: 0;
+
+    width: 230px;
+    height: 330px;
+
+    z-index: 5;
+}
+
+
+/* Top right image */
+
+.photo-2 {
+    left: 75%;
+    top: 0;
+
+    width: 230px;
+    height: 330px;
+
+    z-index: 6;
+}
+
+
+/* Middle left */
+
+.photo-3 {
+    left: 0;
+    top: 345px;
+
+    width: 230px;
+    height: 305px;
+
+    z-index: 5;
+}
+
+
+/* Middle center */
+
+.photo-4 {
+    left: 25%;
+    top: 345px;
+
+    width: 230px;
+    height: 305px;
+
+    z-index: 5;
+}
+
+
+/* Middle right */
+
+.photo-5 {
+    left: 50%;
+    top: 345px;
+
+    width: 230px;
+    height: 305px;
+
+    z-index: 5;
+}
+
+
+/* Bottom left */
+
+.photo-6 {
+    left: 0;
+    top: 665px;
+
+    width: 230px;
+    height: 315px;
+
+    z-index: 5;
+}
+
+
+/* Bottom center */
+
+.photo-7 {
+    left: 50%;
+    top: 665px;
+
+    width: 230px;
+    height: 315px;
+
+    z-index: 5;
+}
+
+
+/* Bottom right */
+
+.photo-8 {
+    left: 75%;
+    top: 665px;
+
+    width: 230px;
+    height: 315px;
+
+    z-index: 5;
+}
+
+
+/* Large lower image */
+
+.photo-9 {
+    left: 25%;
+    top: 995px;
+
+    width: 230px;
+    height: 315px;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   RESPONSIVE — TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .guide {
+        margin-right: 20%;
+    }
+
+    .side-nav {
+        left: 15px;
+    }
+
+    .collage {
+        width: 82vw;
+
+        margin-left: 10%;
+
+        transform: scale(0.9);
+        transform-origin: top left;
+    }
+
+    .date {
+        left: 45%;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE — MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 110px;
+
+        padding:
+            32px
+            20px
+            0
+            20px;
+    }
+
+    .brand {
+        font-size: 28px;
+    }
+
+    .guide {
+        font-size: 28px;
+
+        margin-right: 0;
+
+        letter-spacing: -1px;
+    }
+
+
+    /* Move category navigation to bottom */
+
+    .side-nav {
+
+        position: fixed;
+
+        top: auto;
+        bottom: 20px;
+
+        left: 50%;
+
+        transform:
+            translateX(-50%)
+            rotate(0deg);
+
+        width: 94vw;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        flex-wrap: wrap;
+
+        white-space: normal;
+
+        text-align: center;
+
+        background: rgba(255,255,255,0.9);
+
+        padding: 8px;
+
+        backdrop-filter: blur(10px);
+    }
+
+    .side-nav a {
+        font-size: 9px;
+    }
+
+    .side-nav span {
+        font-size: 8px;
+    }
+
+
+    /* Date */
+
+    .date {
+        top: 135px;
+
+        left: 20px;
+
+        font-size: 12px;
+    }
+
+
+    /* Collage */
+
+    .page {
+        padding-top: 140px;
+    }
+
+    .collage {
+
+        width: 100%;
+
+        height: 1100px;
+
+        margin: 60px 0 0 0;
+
+        transform: none;
+    }
+
+
+    .photo-1 {
+        left: 42%;
+        top: 0;
+
+        width: 27vw;
+        height: 38vw;
+    }
+
+    .photo-2 {
+        left: 71%;
+        top: 0;
+
+        width: 27vw;
+        height: 38vw;
+    }
+
+    .photo-3 {
+        left: 5%;
+        top: 42vw;
+
+        width: 27vw;
+        height: 36vw;
+    }
+
+    .photo-4 {
+        left: 34%;
+        top: 42vw;
+
+        width: 27vw;
+        height: 36vw;
+    }
+
+    .photo-5 {
+        left: 63%;
+        top: 42vw;
+
+        width: 27vw;
+        height: 36vw;
+    }
+
+    .photo-6 {
+        left: 5%;
+        top: 82vw;
+
+        width: 27vw;
+        height: 38vw;
+    }
+
+    .photo-7 {
+        left: 42%;
+        top: 82vw;
+
+        width: 27vw;
+        height: 38vw;
+    }
+
+    .photo-8 {
+        left: 71%;
+        top: 82vw;
+
+        width: 27vw;
+        height: 38vw;
+    }
+
+    .photo-9 {
+        left: 34%;
+        top: 123vw;
+
+        width: 27vw;
+        height: 38vw;
+    }
+}
