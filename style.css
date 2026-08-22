@@ -21,11 +21,12 @@ body {
 
 
 /* =========================================
-   HEADER
+   MAIN HEADER
 ========================================= */
 
 .header {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -46,12 +47,15 @@ body {
 
 /* =========================================
    NOTABLE WALKS LOGO
+   SAME AS INDEX.HTML
 ========================================= */
 
 .brand {
-    font-family: "Caveat Brush", cursive;
+    font-family: "Caveat Brush", cursive !important;
 
     font-size: clamp(30px, 3vw, 48px);
+
+    font-weight: 400;
 
     letter-spacing: 1px;
 
@@ -60,6 +64,8 @@ body {
     transform: rotate(-1deg);
 
     white-space: nowrap;
+
+    color: #111111;
 }
 
 
@@ -74,7 +80,6 @@ body {
 
     pointer-events: auto;
 }
-
 
 .search-input {
     width: 100%;
@@ -98,18 +103,15 @@ body {
     outline: none;
 }
 
-
 .search-input::placeholder {
     color: #111111;
 
     opacity: 1;
 }
 
-
 .search-input:focus {
     border-bottom: 1px solid #777777;
 }
-
 
 .clear-search {
     position: absolute;
@@ -136,7 +138,6 @@ body {
     transition: opacity 0.2s ease;
 }
 
-
 .clear-search.visible {
     opacity: 1;
 
@@ -160,6 +161,7 @@ body {
 
     display: flex;
     align-items: center;
+
     gap: 9px;
 
     white-space: nowrap;
@@ -167,11 +169,12 @@ body {
     z-index: 100;
 }
 
-
 .side-nav a {
     color: #111111;
 
     text-decoration: none;
+
+    font-family: "Inter", Arial, sans-serif;
 
     font-size: 14px;
 
@@ -182,11 +185,9 @@ body {
     transition: opacity 0.25s ease;
 }
 
-
 .side-nav a:hover {
     opacity: 0.4;
 }
-
 
 .side-nav span {
     font-size: 12px;
@@ -218,6 +219,8 @@ body {
     top: 415px;
     left: 35.2%;
 
+    font-family: "Inter", Arial, sans-serif;
+
     font-size: 16px;
 
     font-weight: 400;
@@ -237,6 +240,8 @@ body {
 
     top: 190px;
     left: 35.2%;
+
+    font-family: "Inter", Arial, sans-serif;
 
     font-size: 11px;
 
@@ -284,7 +289,6 @@ body {
     cursor: pointer;
 }
 
-
 .photo img {
     width: 100%;
     height: 100%;
@@ -313,7 +317,7 @@ body {
 
 
 /* =========================================
-   HOVER
+   PHOTO HOVER
 ========================================= */
 
 .photo:hover {
@@ -321,7 +325,6 @@ body {
 
     z-index: 50;
 }
-
 
 .photo:hover img {
     transform: scale(1.04);
@@ -331,9 +334,6 @@ body {
 /* =========================================
    PHOTO POSITIONS
 ========================================= */
-
-
-/* Top left-ish image */
 
 .photo-1 {
     left: 50%;
@@ -345,9 +345,6 @@ body {
     z-index: 5;
 }
 
-
-/* Top right image */
-
 .photo-2 {
     left: 75%;
     top: 0;
@@ -357,9 +354,6 @@ body {
 
     z-index: 6;
 }
-
-
-/* Middle left */
 
 .photo-3 {
     left: 0;
@@ -371,9 +365,6 @@ body {
     z-index: 5;
 }
 
-
-/* Middle center */
-
 .photo-4 {
     left: 25%;
     top: 345px;
@@ -383,9 +374,6 @@ body {
 
     z-index: 5;
 }
-
-
-/* Middle right */
 
 .photo-5 {
     left: 50%;
@@ -397,9 +385,6 @@ body {
     z-index: 5;
 }
 
-
-/* Bottom left */
-
 .photo-6 {
     left: 0;
     top: 665px;
@@ -410,9 +395,6 @@ body {
     z-index: 5;
 }
 
-
-/* Bottom center */
-
 .photo-7 {
     left: 75%;
     top: 600px;
@@ -422,9 +404,6 @@ body {
 
     z-index: 5;
 }
-
-
-/* Bottom right */
 
 .photo-8 {
     left: 25%;
@@ -438,7 +417,7 @@ body {
 
 
 /* =========================================
-   RESPONSIVE — TABLET
+   TABLET
 ========================================= */
 
 @media (max-width: 1000px) {
@@ -448,16 +427,13 @@ body {
         padding-right: 25px;
     }
 
-
     .search-container {
         width: 180px;
     }
 
-
     .side-nav {
         left: 15px;
     }
-
 
     .collage {
         width: 82vw;
@@ -469,11 +445,9 @@ body {
         transform-origin: top left;
     }
 
-
     .date {
         left: 45%;
     }
-
 
     .search-message {
         left: 45%;
@@ -482,7 +456,7 @@ body {
 
 
 /* =========================================
-   RESPONSIVE — MOBILE
+   MOBILE MAIN PAGE
 ========================================= */
 
 @media (max-width: 700px) {
@@ -497,18 +471,13 @@ body {
             20px;
     }
 
-
     .brand {
         font-size: 28px;
     }
 
-
-    /* Search */
-
     .search-container {
         width: 115px;
     }
-
 
     .search-input {
         font-size: 9px;
@@ -517,13 +486,9 @@ body {
         padding-bottom: 5px;
     }
 
-
     .clear-search {
         font-size: 17px;
     }
-
-
-    /* Move category navigation to bottom */
 
     .side-nav {
 
@@ -557,18 +522,13 @@ body {
         backdrop-filter: blur(10px);
     }
 
-
     .side-nav a {
         font-size: 9px;
     }
 
-
     .side-nav span {
         font-size: 8px;
     }
-
-
-    /* Date */
 
     .date {
         top: 135px;
@@ -578,9 +538,6 @@ body {
         font-size: 12px;
     }
 
-
-    /* Search message */
-
     .search-message {
         top: 165px;
 
@@ -589,13 +546,9 @@ body {
         font-size: 9px;
     }
 
-
-    /* Collage */
-
     .page {
         padding-top: 140px;
     }
-
 
     .collage {
 
@@ -608,7 +561,6 @@ body {
         transform: none;
     }
 
-
     .photo-1 {
         left: 42%;
         top: 0;
@@ -616,7 +568,6 @@ body {
         width: 27vw;
         height: 38vw;
     }
-
 
     .photo-2 {
         left: 71%;
@@ -626,7 +577,6 @@ body {
         height: 38vw;
     }
 
-
     .photo-3 {
         left: 5%;
         top: 42vw;
@@ -634,7 +584,6 @@ body {
         width: 27vw;
         height: 36vw;
     }
-
 
     .photo-4 {
         left: 34%;
@@ -644,7 +593,6 @@ body {
         height: 36vw;
     }
 
-
     .photo-5 {
         left: 63%;
         top: 42vw;
@@ -652,7 +600,6 @@ body {
         width: 27vw;
         height: 36vw;
     }
-
 
     .photo-6 {
         left: 5%;
@@ -662,7 +609,6 @@ body {
         height: 38vw;
     }
 
-
     .photo-7 {
         left: 42%;
         top: 82vw;
@@ -671,7 +617,6 @@ body {
         height: 38vw;
     }
 
-
     .photo-8 {
         left: 71%;
         top: 82vw;
@@ -679,8 +624,11 @@ body {
         width: 27vw;
         height: 38vw;
     }
-}/* =========================================
-   DETAIL PAGE
+}
+
+
+/* =========================================
+   DETAIL PAGE HEADER
 ========================================= */
 
 .detail-header {
@@ -690,44 +638,82 @@ body {
     left: 0;
 
     width: 100%;
-    height: 120px;
+    height: 150px;
 
     display: flex;
+
     align-items: flex-start;
+
     justify-content: space-between;
 
-    padding: 45px 5vw 0 3.5vw;
+    padding: 55px 5.2vw 0 3.5vw;
 
     z-index: 100;
 
-    background: white;
+    background: #ffffff;
 }
 
+
+/* =========================================
+   DETAIL PAGE LOGO
+========================================= */
+
+.detail-header .brand {
+    font-family: "Caveat Brush", cursive !important;
+
+    font-size: clamp(30px, 3vw, 48px);
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    line-height: 0.8;
+
+    transform: rotate(-1deg);
+
+    white-space: nowrap;
+
+    color: #111111;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
 
 .back-button {
     color: #111111;
 
     text-decoration: none;
 
+    font-family: "Inter", Arial, sans-serif;
+
     font-size: 11px;
+
+    font-weight: 400;
 
     letter-spacing: 1px;
 
     transition: opacity 0.25s ease;
-}
 
+    margin-top: 5px;
+}
 
 .back-button:hover {
     opacity: 0.4;
 }
 
 
+/* =========================================
+   DETAIL PAGE
+========================================= */
+
 .detail-page {
 
     min-height: 100vh;
 
     padding:
-        170px
+        200px
         8vw
         100px
         8vw;
@@ -741,13 +727,16 @@ body {
     gap: 8vw;
 
     align-items: start;
-
 }
 
 
 /* =========================================
-   MAIN IMAGE
+   LARGE CELEBRITY IMAGE
 ========================================= */
+
+.detail-main {
+    width: 100%;
+}
 
 .detail-image-container {
 
@@ -759,7 +748,6 @@ body {
 
     background: #eeeeee;
 }
-
 
 .detail-image-container img {
 
@@ -776,28 +764,36 @@ body {
 
 
 /* =========================================
-   SIDEBAR
+   DETAIL SIDEBAR
 ========================================= */
 
 .detail-sidebar {
 
     padding-top: 10px;
-}
 
+    width: 100%;
+}
 
 .detail-person {
 
+    font-family: "Inter", Arial, sans-serif;
+
     font-size: 18px;
+
+    font-weight: 400;
 
     letter-spacing: 0.5px;
 
     margin-bottom: 45px;
 }
 
-
 .wearing-title {
 
+    font-family: "Inter", Arial, sans-serif;
+
     font-size: 10px;
+
+    font-weight: 400;
 
     letter-spacing: 1.5px;
 
@@ -830,12 +826,9 @@ body {
     transition: opacity 0.25s ease;
 }
 
-
 .product:hover {
-
     opacity: 0.5;
 }
-
 
 .product-image {
 
@@ -848,7 +841,6 @@ body {
     overflow: hidden;
 }
 
-
 .product-image img {
 
     width: 100%;
@@ -860,71 +852,70 @@ body {
     object-fit: cover;
 }
 
-
 .product-info {
 
+    font-family: "Inter", Arial, sans-serif;
+
     font-size: 10px;
+
+    font-weight: 400;
 
     line-height: 1.5;
 
     letter-spacing: 0.4px;
 }
 
-
 .product-info div:first-child {
-
     margin-bottom: 5px;
 }
 
-
 .product-info div:last-child {
-
     color: #777777;
 }
 
 
 /* =========================================
-   MOBILE
+   DETAIL PAGE MOBILE
 ========================================= */
 
 @media (max-width: 700px) {
 
     .detail-header {
 
-        height: 90px;
+        height: 110px;
 
         padding:
-            30px
+            32px
             20px
             0
             20px;
-
-        align-items: flex-start;
     }
-
 
     .detail-header .brand {
 
-        font-size: 25px;
-    }
+        font-family: "Caveat Brush", cursive !important;
 
+        font-size: 28px;
+
+        font-weight: 400;
+    }
 
     .back-button {
 
         font-size: 9px;
-    }
 
+        margin-top: 3px;
+    }
 
     .detail-page {
 
         display: block;
 
         padding:
-            120px
+            140px
             20px
             100px;
     }
-
 
     .detail-image-container {
 
@@ -933,18 +924,19 @@ body {
         max-height: none;
     }
 
-
     .detail-image-container img {
+
+        width: 100%;
+
+        height: auto;
 
         max-height: none;
     }
-
 
     .detail-sidebar {
 
         padding-top: 35px;
     }
-
 
     .detail-person {
 
@@ -953,12 +945,10 @@ body {
         font-size: 16px;
     }
 
-
     .product {
 
         grid-template-columns: 80px 1fr;
     }
-
 
     .product-image {
 
@@ -966,5 +956,4 @@ body {
 
         height: 100px;
     }
-
 }

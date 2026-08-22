@@ -49,9 +49,13 @@ searchInput.addEventListener("input", () => {
     // Show / hide clear button
 
     if (searchTerm.length > 0) {
+
         clearSearch.classList.add("visible");
+
     } else {
+
         clearSearch.classList.remove("visible");
+
     }
 
 
@@ -60,12 +64,15 @@ searchInput.addEventListener("input", () => {
     if (searchTerm === "") {
 
         photos.forEach((photo) => {
+
             photo.classList.remove("hidden");
+
         });
 
         searchMessage.textContent = "";
 
         return;
+
     }
 
 
