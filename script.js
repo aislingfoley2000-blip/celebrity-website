@@ -25,11 +25,10 @@ photos.forEach((photo) => {
 
     photo.addEventListener("click", () => {
 
-        photos.forEach((item) => {
-            item.classList.remove("selected");
-        });
+        const person = photo.dataset.person;
 
-        photo.classList.add("selected");
+        window.location.href =
+            `detail.html?person=${encodeURIComponent(person)}`;
 
     });
 
